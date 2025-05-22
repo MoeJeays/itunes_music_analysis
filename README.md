@@ -1,59 +1,39 @@
-# Music Library Analysis — Personal Apple Music Data
+# Apple Music Listening Data Analysis
 
-This project explores my personal music listening habits using data exported from Apple Music. The aim was to investigate whether features such as **genre**, **song duration**, and **date added** influence how frequently I listen to songs (measured by play count).
+Quick project to look at my own listening habits from Apple Music. I wanted to figure out if things like genre, song duration, or when I added the track had anything to do with how often I listen to it (play count).
 
-All analysis was conducted in Python using standard data science libraries and statistical testing.
+I used the iTunes XML export to get my data, then cleaned it up in Python using pandas. Focused mostly on the top 10 genres with enough songs to be worth comparing (10+ songs per genre).
 
----
-
-## Project Overview
-
-### Objectives:
-- Clean and preprocess Apple Music library data
-- Explore distributions and patterns in song play counts
-- Statistically test whether features like genre, duration, and recency influence listening behavior
-- Visualize results using Matplotlib and Seaborn
+After cleaning, I ran some distribution checks, statistical tests, and visualised the results with seaborn/matplotlib.
 
 ---
 
-## Key Findings
+## Key stuff:
 
-> - **Play counts are not normally distributed** — a few songs dominate play frequency.
-> - A **Kruskal-Wallis H-test** (p = 0.44) showed **no significant difference** in play counts across genres.
-> - **Boxplots** and **KDE plots** further confirmed similar distributions across genres.
-> - **Correlation and regression analysis** revealed **no strong relationships** between play count and:
->   - **Song duration**
->   - **Date added**
+- Removed songs with 0 plays
+- Filtered out genres with less than 10 songs
+- Converted date/time formats and durations
+- Looked at:
+  - distribution of play counts
+  - correlation with song duration and date added
+  - whether genre affects play count
+
+Statistically:  
+- **Play counts are not normally distributed** — a few songs dominate play frequency.
+- A **Kruskal-Wallis H-test** (p = 0.44) showed **no significant difference** in play counts across genres.
+- **Boxplots** and **KDE plots** further confirmed similar distributions across genres.
+- **Correlation and regression analysis** revealed **no strong relationships** between play count and date added or song length
 
 **Conclusion**: Listening frequency appears to be driven more by subjective preferences rather than genre, length, or recency.
 
 ---
 
-## Tools & Libraries
+## Tools
 
-- Python 3.10+
+- Python (Jupyter)
 - pandas
-- seaborn
 - matplotlib
-- scipy (for statistical testing)
-- Jupyter Notebook
-
----
-
-## Data Cleaning Process
-
-- Removed songs with 0 play count
-- Filtered to top 10 genres with ≥10 songs each
-- Converted time and date formats
-- Standardised unnecessarily splintered genres for analysis
-
----
-
-## Statistical Methods Used
-
-- **KDE plots** to inspect distribution shapes
-- **Shapiro-Wilk test** to check for normality
-- **Kruskal-Wallis H-test** for genre-based comparison
-- **Correlation matrix** and **regression line fitting** for recency analysis
+- seaborn
+- scipy
 
 ---
