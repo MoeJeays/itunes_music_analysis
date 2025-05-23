@@ -18,22 +18,29 @@ After cleaning, I ran some distribution checks, statistical tests, and visualise
   - correlation with song duration and date added
   - whether genre affects play count
 
-Statistically:  
-- **Play counts are not normally distributed** — a few songs dominate play frequency.
-- A **Kruskal-Wallis H-test** (p = 0.44) showed **no significant difference** in play counts across genres.
-- **Boxplots** and **KDE plots** further confirmed similar distributions across genres.
-- **Correlation and regression analysis** revealed **no strong relationships** between play count and date added or song length
+---
 
-**Conclusion**: Listening frequency appears to be driven more by subjective preferences rather than genre, length, or recency.
+## Statistically:  
+- **The data was not normally distributed**, as shown by distribution plots and statistical tests. This justified the use of non-parametric tests like Kruskal-Wallis and Levene’s.
+- **Levene’s test** showed that the variance in play counts differs significantly between genres (**p ≈ 0**), and the **Kruskal-Wallis test** confirmed that the distributions themselves also differ significantly across genres (**p ≈ 0**). This suggests that **genre plays a role in how often I listen to music**.
+- **Correlation analysis** showed no meaningful relationship between play count and **song duration** or **how long ago the song was added**, which was supported by weak slopes in regression plots.
+- **Boxplots and KDE plots** visually backed up the statistical findings, with some genres having wider spreads or higher medians than others.
+
+**Conclusion**: Genre appears to influence listening frequency, while other metadata like duration or recency doesn’t show a consistent effect.
 
 ---
 
-## Tools
+## Tools and Techniques
 
-- Python (Jupyter)
-- pandas
-- matplotlib
-- seaborn
-- scipy
+- **Language:** Python 
+- **Libraries:** `pandas`, `matplotlib`, `seaborn`, `scipy.stats`
+- **Statistical Methods:**
+  - Levene’s Test (for equality of variances)
+  - Kruskal-Wallis H Test (for differences between genres)
+  - Correlation & linear regression
+- **Visualizations:**
+  - KDE plots
+  - Boxplots by genre
+  - Scatterplots with regression lines
 
 ---
