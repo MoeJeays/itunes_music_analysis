@@ -44,3 +44,10 @@ After cleaning, I ran some distribution checks, statistical tests, and visualise
   - Scatterplots with regression lines
 
 ---
+
+## Future Improvements
+
+- Run test with a frequently used playlist rather than a whole library to test correlation
+- Integrate tableau for an interactive dashboard view
+
+---
