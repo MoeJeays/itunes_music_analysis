@@ -21,7 +21,7 @@ After cleaning, I ran some distribution checks, statistical tests, and visualise
 ---
 
 ## Statistically:  
-- **The data was not normally distributed with no homogeny of variance**, as shown by distribution plots and statistical tests. This justified the use of non-parametric tests like Kruskal-Wallis, Mood's median and Levene’s.
+- **The data was not normally distributed with no homogeny of variance**, as shown by distribution plots and statistical tests. This justified the use of non-parametric tests like Kruskal-Wallis and Mood's median.
 - **Levene’s test** showed that the variance in play counts differs significantly between genres (**p ≈ 0**), and both the **Kruskal-Wallis test** and **Mood's median test** confirmed that the distributions themselves also differ significantly across genres (**p ≈ 0**). This suggests that **genre plays a role in how often I listen to music**.
 - **Correlation analysis** showed no meaningful relationship between play count and **song duration** or **how long ago the song was added**, which was supported by weak slopes in regression plots.
 - **Boxplots and KDE plots** visually backed up the statistical findings, with some genres having wider spreads or higher medians than others.
