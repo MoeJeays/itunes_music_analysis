@@ -21,8 +21,8 @@ After cleaning, I ran some distribution checks, statistical tests, and visualise
 ---
 
 ## Statistically:  
-- **The data was not normally distributed**, as shown by distribution plots and statistical tests. This justified the use of non-parametric tests like Kruskal-Wallis and Levene’s.
-- **Levene’s test** showed that the variance in play counts differs significantly between genres (**p ≈ 0**), and the **Kruskal-Wallis test** confirmed that the distributions themselves also differ significantly across genres (**p ≈ 0**). This suggests that **genre plays a role in how often I listen to music**.
+- **The data was not normally distributed**, as shown by distribution plots and statistical tests. This justified the use of non-parametric tests like Kruskal-Wallis, Mood's median and Levene’s.
+- **Levene’s test** showed that the variance in play counts differs significantly between genres (**p ≈ 0**), and both the **Kruskal-Wallis test** and **Mood's median test** confirmed that the distributions themselves also differ significantly across genres (**p ≈ 0**). This suggests that **genre plays a role in how often I listen to music**.
 - **Correlation analysis** showed no meaningful relationship between play count and **song duration** or **how long ago the song was added**, which was supported by weak slopes in regression plots.
 - **Boxplots and KDE plots** visually backed up the statistical findings, with some genres having wider spreads or higher medians than others.
 
@@ -37,6 +37,7 @@ After cleaning, I ran some distribution checks, statistical tests, and visualise
 - **Statistical Methods:**
   - Levene’s Test (for equality of variances)
   - Kruskal-Wallis H Test (for differences between genres)
+  - Mood's median test (due to a large number of outlying data points)
   - Correlation & linear regression
 - **Visualizations:**
   - KDE plots
